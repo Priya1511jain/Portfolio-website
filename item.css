@@ -7,6 +7,8 @@
 
 body {
     color: white;
+    width: 100%;
+    height: 100%;
 }
 
 #header{
@@ -70,7 +72,7 @@ body {
     height: 400px;
     position: relative;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     height: 100vh;
     display: inline-block;
     align-items: center;
@@ -80,12 +82,15 @@ body {
 .content h3 {
     font-size: 28px;
     font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .content h1 {
     font-size: 50px;
     font-weight: 700;
     margin: 8px 0;
+    text-align: center;
 }
 
 
@@ -311,6 +316,7 @@ p{
 /* contact */
 #contact{
     background: #1B0442;
+    width: 100%;
 }
 
 .contact-left{
@@ -385,4 +391,85 @@ form .btn2 {
     font-weight: 300;
     background: #A361C2;
     color: white;
+}
+.nav1 .fas{
+    display: none;
+
+}
+
+/* CSS FOR SMALL SCREEN  */
+
+@media only screen and (max-width: 600px) {
+    #header{
+        background: url(imagess/Designer\ \(2\).png ); 
+    }
+    /* .content{
+        align-items: center;
+        justify-content: center;
+        display: inline-block;
+    } */
+    .content h3 {
+        font-size: 20px;
+        font-weight: 600;
+        align-items: center;
+        margin: 15px 0;
+    }
+    
+    .content h1 {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+    .nav1 .fas{
+        display: block;
+        font-size: 25px;
+    }
+    .navbar{
+        background-color: #1B0442;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    .navbar a{
+        display: block;
+        margin: 25px;
+    }
+    .navbar a .fas{
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about1, .about2{
+        flex-basis: 100%;
+    }
+    .about1{
+        margin-bottom: 30px;
+    }
+    .about2{
+        font-size: 15px;
+    }
+    .tabs{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .languages-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .languages-img-wrapper{
+        padding: 10px 10px ;
+    }
+    
 }
