@@ -9,23 +9,25 @@
     <link rel="" href="item.js">
     <script src="https://kit.fontawesome.com/5e0303d1a2.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body> 
 <div id="header">
     <div class="contain">
     <div class="nav1">
         <a href="#" class="logo">Priya Jain</a>
-        <nav class="navbar">
+        <nav class="navbar" id="sidemenu">
             <a href="#header"><i class="fa-solid fa-house"></i> Home</a>
             <a href="#about"><i class="fa-solid fa-address-card"></i> About</a>
             <a href="#languages"><i class="fa-solid fa-code"></i> Skills</a>
             <a href="#port"><i class="fa-solid fa-diagram-project"></i> Project</a>
             <a href="#contact"><i class="fa-solid fa-user"></i> Contact</a>
+            <i class="fa-regular fa-circle-xmark fas" onclick="closemenu()"></i>
         </nav>
+        <i class="fa-solid fa-bars fas" onclick="openmenu()" ></i>
     </div>
     <section class="home">
         <div class="content">
             <h3>Hello! It's Me</h3>
-            <h1 style="font-size: 50px;">Priya Jain</h1>
+            <h1>Priya Jain</h1>
             <h3>And I'm a <span>Front-Web Developer</span></h3>
             <br><br><a href="#about" class="nav2">Know More</a>
          </div>
@@ -150,17 +152,17 @@
                 <div class="work">
                     <img src="imagess/Something new 1 (1).png" >
                     <div class="layer">
-                        <h3>Calculator</h3>
-                        <p>It is created using HTML, CSS. <br>The prerequisites of this project are the basic knowledge of HTML and CSS.</p>
-                        <a href="https://github.com/Priya1511jain/calculator"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>Rejouice</h3>
+                        <p>It is Animated non-Responsive website created using HTML, CSS, javascript. <br>The prerequisites of this project are the basic knowledge of HTML and CSS.</p>
+                        <a href="https://priya1511jain.github.io/Rejouice/"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="imagess/Something new 1 (2).png" >
                     <div class="layer">
-                        <h3>Landing Page</h3>
-                        <p>It is created using HTML,CSS.<br>The prerequisites of this project are the basic knowledge of HTML and CSS.</p>
-                        <a href="https://github.com/Priya1511jain/landing-page"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>iCoder Website</h3>
+                        <p>It is created using HTML, Bootstrap CSC, javascript.<br>The prerequisites of this project are the basic knowledge of HTML and CSS.</p>
+                        <a href=" https://priya1511jain.github.io/icoder/"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -209,6 +211,34 @@
                 </div>
         </div>
     </div>
+    
+
+     
+     <script>
+            var tabs = document.getElementsByClassName("tabs");
+            var tabcontents = document.getElementsByClassName("tabcontents");
+
+        function opentab(tabname){
+           for(tab of tabs){
+               tab.classList.remove("active-link");
+            }
+           for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+              }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+  sidemenu.style.right = "0";
+}
+function closemenu(){
+  sidemenu.style.right = "-200px";
+}          
+
+     </script>
+
    
 </body>
 </html>
